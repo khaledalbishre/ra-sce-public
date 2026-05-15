@@ -1,0 +1,22 @@
+dataset_key: TREC_DL_20
+
+index_path: ./artifacts/indexes/msmarco_contriever.index
+id_path: ./artifacts/indexes/msmarco_ids_fixed.npy
+
+results_dir: ./results/sweeps/sweeps/dl20_safe
+
+rho: 0.3
+agreement_gate: true
+agree_k: 20
+agree_min_overlap: 6
+
+confidence_lock: true
+ent_lock_quantile: 0.35
+mnorm_lock_quantile: 0.75
+
+topn_lock: true
+topn: 2
+topn_lock_quantile: 0.85
+
+ce_rerank_k: 50
+base_alpha: 0.5

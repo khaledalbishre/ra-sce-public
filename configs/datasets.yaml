@@ -1,0 +1,6 @@
+datasets:
+  - name: "TREC_DL_19"
+    ir_datasets_id: "msmarco-passage/trec-dl-2019/judged"
+
+  - name: "TREC_DL_20"
+    ir_datasets_id: "msmarco-passage/trec-dl-2020/judged"

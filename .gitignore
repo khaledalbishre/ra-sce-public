@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.ipynb_checkpoints/
+
+# Environment
+.env
+.env.local
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Large data files (use external storage)
+*.npy
+*.h5
+*.pkl
+*.bin
+indexes/
+data/raw/
+
+# Logs
+*.log
+logs/
+
+# OS
+Thumbs.db

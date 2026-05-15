@@ -1,0 +1,14 @@
+dataset_key: TREC_DL_20
+
+index_path: ./artifacts/indexes/msmarco_contriever.index
+id_path: ./artifacts/indexes/msmarco_ids_fixed.npy
+
+results_dir: ./results/sweeps/sweeps/dl20_aggressive
+
+rho: 0.7
+agreement_gate: false
+confidence_lock: false
+topn_lock: false
+
+ce_rerank_k: 200
+base_alpha: 0.1

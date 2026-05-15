@@ -1,0 +1,27 @@
+# configs/ra_sce/dl20_bm25.yaml
+# Cross-architecture validation: BM25 + MiniLM-L-12-v2 on TREC-DL'20
+
+experiment_name: dl20_bm25
+dataset: dl20
+
+queries_file: artifacts/data/dl20_queries.tsv
+qrels_file: artifacts/data/qrels_dl20.txt
+
+bm25_index: msmarco-v1-passage
+cross_encoder: cross-encoder/ms-marco-MiniLM-L-12-v2
+
+k0: 100
+ce_rerank_k: 50
+
+kg: 50
+rho: 0.30
+w_gap: 1.0
+w_ent: 0.25
+w_disp: 0.05
+
+alpha_high: 0.75
+alpha_base: 0.60
+alpha_low: 0.45
+
+ce_batch_size: 64
+seed: 42

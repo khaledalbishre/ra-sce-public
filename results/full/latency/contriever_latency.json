@@ -1,0 +1,29 @@
+{
+  "experiment": "cross_encoder_latency_GPU",
+  "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "context": "Contriever experiments setup (Section IV-A)",
+  "hardware": "RTX 4090",
+  "device_verified": "cuda:0",
+  "method": "post-warmup, torch.cuda.synchronize(), torch.no_grad()",
+  "n_queries": 43,
+  "n_docs_per_query": 50,
+  "batch_size": 32,
+  "latency_ms": {
+    "ce_all_per_query_mean": 11.916315843632749,
+    "ce_all_per_query_median": 11.772263795137405,
+    "ce_all_per_query_p95": 12.45691473595798,
+    "ce_all_per_query_min": 11.622563935816288,
+    "ce_all_per_query_max": 14.173754956573248,
+    "ce_all_per_query_std": 0.4264975427408995
+  },
+  "ra_sce_effective": {
+    "gating_rate": 0.3,
+    "effective_ms_per_query": 3.5748947530898243,
+    "speedup_vs_ce_all": 3.3333333333333335
+  },
+  "comparison_bm25_vk": {
+    "bm25_l12_ce_all_mean_ms": 32.11,
+    "contriever_l6_ce_all_mean_ms": 11.916315843632749,
+    "note": "Both on RTX 4090, post-warmup, batch_size=32"
+  }
+}

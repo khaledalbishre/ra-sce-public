@@ -1,0 +1,51 @@
+seed: 42
+device: "cuda"
+
+paths:
+  index_path: "artifacts/indexes/msmarco_contriever.index"
+  id_path: "artifacts/indexes/msmarco_ids_fixed.npy"
+  results_root: "./results/sweeps"
+
+models:
+  biencoder: "facebook/contriever-msmarco"
+  cross_encoder: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+retrieval:
+  k0: 100
+  k1: 1000
+  kg: 50
+
+rerank:
+  use_cross_encoder: true
+  ce_rerank_k: 50
+
+policy:
+  rho: 0.30
+
+  confidence_lock: true
+  ent_lock_quantile: 0.35
+  mnorm_lock_quantile: 0.75
+
+  agreement_gate: true
+  agree_k: 20
+  agree_min_overlap: 6
+
+  adaptive_blend:
+    base_alpha: 0.60
+    alpha_high_conf: 0.75
+    alpha_low_conf: 0.45
+
+  topn_lock: true
+  topn_lock_quantile: 0.85
+  topn: 2
+
+evaluation:
+  primary_k: 10         # for nDCG/MRR
+  map_k: 1000           # MAP@1000
+  rel_threshold: 1      # binary relevance: rel >= 1
+  metrics: ["nDCG@10", "MRR@10", "MAP@1000"]
+
+logging:
+  save_config_snapshot: true
+  save_diagnostics: true
+  verbosity: 1

@@ -1,0 +1,23 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+May 08, 2026 1:35:03 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+
+================================================================================
+SENSITIVITY ANALYSIS: dl19_bm25
+================================================================================
+Label          w_ent   w_disp  nDCG@10    ΔnDCG      Gate%    Harmed%   
+--------------------------------------------------------------------------------
+low_ent        0.10    0.05    0.5409     0.0351++++ 32.6     0.0       
+default        0.25    0.05    0.5382     0.0323++++ 32.6     0.0       
+high_ent       0.50    0.05    0.5382     0.0323++++ 32.6     0.0       
+low_disp       0.25    0.01    0.5407     0.0349++++ 32.6     0.0       
+high_disp      0.25    0.10    0.5382     0.0323++++ 32.6     0.0       
+both_low       0.10    0.01    0.5361     0.0303++++ 32.6     0.0       
+both_high      0.50    0.10    0.5382     0.0323++++ 32.6     0.0       
+gap_only       0.00    0.00    0.5128     0.0069++++ 32.6     2.3       
+extreme        1.00    0.20    0.5382     0.0323++++ 32.6     0.0       
+--------------------------------------------------------------------------------
+nDCG@10 range: [0.5128, 0.5409] (spread: 0.0282, std: 0.0082)
+Harmed%: [0.0, 2.3]%
+Gating%: [32.6, 32.6]%
+================================================================================

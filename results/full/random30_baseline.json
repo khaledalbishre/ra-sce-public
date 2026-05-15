@@ -1,0 +1,14 @@
+{
+  "DL19": {
+    "random30_ndcg": 0.5807,
+    "random30_std": 0.0041,
+    "random30_helped": 20.9,
+    "random30_harmed": 6.7
+  },
+  "DL20": {
+    "random30_ndcg": 0.5787,
+    "random30_std": 0.0036,
+    "random30_helped": 23.1,
+    "random30_harmed": 1.9
+  }
+}

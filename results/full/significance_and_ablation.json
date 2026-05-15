@@ -1,0 +1,80 @@
+{
+  "DL19": {
+    "p_ttest": 0.0118,
+    "p_wilcoxon": 0.0125,
+    "p_ttest_ce": 0.0001,
+    "p_wilcoxon_ce": 0.0001,
+    "helped_pct": 18.6,
+    "neutral_pct": 76.74,
+    "harmed_pct": 4.65,
+    "ablations": {
+      "no_agree": {
+        "delta": 0.017333032940169253,
+        "helped_pct": 18.6,
+        "neutral_pct": 76.74,
+        "harmed_pct": 4.65,
+        "p_wilcoxon": 0.0125
+      },
+      "no_conf": {
+        "delta": 0.017706841252302853,
+        "helped_pct": 23.26,
+        "neutral_pct": 72.09,
+        "harmed_pct": 4.65,
+        "p_wilcoxon": 0.006
+      },
+      "no_topn": {
+        "delta": 0.017333032940169253,
+        "helped_pct": 18.6,
+        "neutral_pct": 76.74,
+        "harmed_pct": 4.65,
+        "p_wilcoxon": 0.0125
+      },
+      "all_off": {
+        "delta": 0.01763533404745026,
+        "helped_pct": 23.26,
+        "neutral_pct": 72.09,
+        "harmed_pct": 4.65,
+        "p_wilcoxon": 0.0076
+      }
+    }
+  },
+  "DL20": {
+    "p_ttest": 0.503,
+    "p_wilcoxon": 0.1614,
+    "p_ttest_ce": 0.0,
+    "p_wilcoxon_ce": 0.0,
+    "helped_pct": 12.96,
+    "neutral_pct": 85.19,
+    "harmed_pct": 1.85,
+    "ablations": {
+      "no_agree": {
+        "delta": 0.003261730396092431,
+        "helped_pct": 12.96,
+        "neutral_pct": 85.19,
+        "harmed_pct": 1.85,
+        "p_wilcoxon": 0.1614
+      },
+      "no_conf": {
+        "delta": 0.004547493765292012,
+        "helped_pct": 14.81,
+        "neutral_pct": 81.48,
+        "harmed_pct": 3.7,
+        "p_wilcoxon": 0.0926
+      },
+      "no_topn": {
+        "delta": 0.003261730396092431,
+        "helped_pct": 12.96,
+        "neutral_pct": 85.19,
+        "harmed_pct": 1.85,
+        "p_wilcoxon": 0.1614
+      },
+      "all_off": {
+        "delta": 0.005725656509717043,
+        "helped_pct": 14.81,
+        "neutral_pct": 81.48,
+        "harmed_pct": 3.7,
+        "p_wilcoxon": 0.1141
+      }
+    }
+  }
+}

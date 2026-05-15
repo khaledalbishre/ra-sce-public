@@ -1,0 +1,37 @@
+# configs/ra_sce/dl19_bm25.yaml
+# Cross-architecture validation: BM25 + MiniLM-L-12-v2 on TREC-DL'19
+
+experiment_name: dl19_bm25
+dataset: dl19
+
+# Data files (TREC-DL 2019)
+queries_file: artifacts/data/dl19_queries.tsv
+qrels_file: qrels_dl19.txt
+
+# BM25 retriever
+bm25_index: msmarco-v1-passage  # pyserini pre-built
+
+# Cross-encoder (different from L-6 used in main paper)
+cross_encoder: cross-encoder/ms-marco-MiniLM-L-12-v2
+
+# Retrieval depths
+k0: 100              # baseline retrieval depth
+ce_rerank_k: 50      # number of candidates for CE rerank
+
+# RA-SCE policy parameters (matched to main paper for direct comparison)
+kg: 50               # top-k for risk signal computation
+rho: 0.30            # risk budget (30% gating)
+w_gap: 1.0           # gap feature weight
+w_ent: 0.25          # entropy weight
+w_disp: 0.05         # dispersion penalty weight
+
+# Adaptive blending
+alpha_high: 0.75
+alpha_base: 0.60
+alpha_low: 0.45
+
+# Cross-encoder batch size (adjust based on GPU memory)
+ce_batch_size: 64
+
+# Reproducibility
+seed: 42

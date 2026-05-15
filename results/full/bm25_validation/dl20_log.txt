@@ -1,0 +1,13 @@
+WARNING: Using incubator modules: jdk.incubator.vector
+May 08, 2026 1:17:22 AM org.apache.lucene.store.MemorySegmentIndexInputProvider <init>
+INFO: Using MemorySegmentIndexInput with Java 21; to disable start with -Dorg.apache.lucene.store.MMapDirectory.enableMemorySegments=false
+
+======================================================================
+SUMMARY: dl20_bm25
+======================================================================
+  Base@k0:    nDCG@10 = 0.4302
+  CE-All:     nDCG@10 = 0.5528  (harmed: 1.9%)
+  Random-30%: nDCG@10 = 0.4858 ± 0.0296
+  RA-SCE:     nDCG@10 = 0.4820  (harmed: 1.9%)
+  Gating:     31.5%
+======================================================================
